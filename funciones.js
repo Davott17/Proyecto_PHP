@@ -17,4 +17,4 @@ window.onload = () => {
     fondoRegistro.onclick = () => {
         registro.classList.add("oculto");
     }
-}
+} 

@@ -1,0 +1,6 @@
+ErrorDocument 404 /erro.html
+ErrorDocument 500 /erro.html
+RewriteEngine ON
+RewriteBase /
+
+RewriteRule ^producto/([^/]+)/?$  producto.php?id=$1 [L]

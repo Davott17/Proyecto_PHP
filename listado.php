@@ -49,7 +49,18 @@ for ($i = 0; $i < count($camisetas); $i++) {
                 }
             }
         }else{
-            fetch(`agregarProducto`);
+            fetch(`agregarProducto.php?id=${idProducto}`)
+            .then(respuesta => {
+                return respuesta.json();
+            })
+            .then(respuestaJSON => {
+                if(respuestaJSON.ok){
+                    alert("Bien");
+                }else{
+                    alert("Mal");
+                }
+            })
+            alert(1);
         }
     }
 </script>

@@ -26,9 +26,12 @@ for ($i = 0; $i < count($camisetas); $i++) {
                 const productos = carrito.split("&")
                 let existe = false;
                 let texto = "";
+                //Para cada producto
                 for (let i = 0; i < productos.length; i++) {
+                    //Compruebo si existe el producto
                     producto = JSON.parse(productos[i]);
                     if (producto.idProducto == idProducto) {
+                        // si existe sumo 1 y cambio la variable de cantidad
                         existe = true;
                         productos[i].contidad += 1;
                     }

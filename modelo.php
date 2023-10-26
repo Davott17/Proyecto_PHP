@@ -2,7 +2,7 @@
 class conexionBBDD{
     private $conn;
     function __construct($usuario, $contra,$servidor, $bbdd){
-        $this->conn = new mysqli($usuario, $contra,$servidor, $bbdd);
+        $this->conn = new mysqli($usuario, $contra,$servidor,$bbdd);
     }
     function obtenerDatos($consulta){
        return mysqli_query($this->conn, $consulta);

@@ -1,7 +1,9 @@
 window.onload = () => {
-const boton_carrito = document.querySelector("#carrito")
-boton_carrito.addEventListener( function ()   {
-const meterAlCarrito = (idProducto, idUsuario = false) => {
+var boton = document.querySelectorAll(".carrito");
+for( var i = 0; i< boton.length;i++){
+    var carrito = boton[i];
+    carrito.addEventListener('click', (idUsuario = false) => {
+    let idProducto = carrito.getAttribute("data-id-producto");
     if (idUsuario == false) {
         if (localStorage.getItem("carrito") == null) {
             localStorage.setItem("carrito", JSON.stringify({
@@ -9,23 +11,23 @@ const meterAlCarrito = (idProducto, idUsuario = false) => {
                 cantidad: 1
             }));
 
-
+            
         } else {
 
             const carritoJSON = JSON.parse(localStorage.getItem("carrito"));
-            const productos = carrito.split("&")
+            const productos = carrito.split("&");
             let existe = false;
             let texto = "";
             //Para cada producto
             for (let i = 0; i < productos.length; i++) {
                 //Compruebo si existe el producto
-                producto = JSON.parse(productos[i]);
-                if (producto.idProducto == idProducto) {
+                productos = JSON.parse(productos[i]);
+                if (productos.idProducto == idProducto) {
                     // si existe sumo 1 y cambio la variable de cantidad
                     existe = true;
                     productos[i].contidad += 1;
                 }
-                texto += JSON.stringify(producto)+"&";
+                texto += JSON.stringify(productos)+"&";
                 
                 
             }
@@ -55,6 +57,8 @@ const meterAlCarrito = (idProducto, idUsuario = false) => {
         })
         alert(1);
     }
-}
+
 });
+}
+
 }

@@ -22,7 +22,7 @@ $camisetas = $camiseta->convertirDatos($datos);
     <script src="carrito.js"></script>
 </head>
 
-<body class="">
+<body >
     <section class="layout">
         <header class="">
             <div class="centrar plantilla tres arriba">
@@ -93,14 +93,14 @@ $camisetas = $camiseta->convertirDatos($datos);
                     <?php
 
                     for ($i = 0; $i < count($camisetas); $i++) {
-                        $id = $camisetas[$i]->Id;
+                        $idProducto = $camisetas[$i]->Id;
                         $nombre = $camisetas[$i]->titulo;
                         $precio = $camisetas[$i]->precio;
                         $URL = $camisetas[$i]->url;
 
                     ?>
 
-                        <article>
+                        <article id="<?=$idProducto?>">
                             <div class="hover"><a href="camiseta.php?id=<?= $id ?>"><img src="<?= $URL ?>" alt="<?= $nombre ?>" class="tamaño"></a></div>
                             <div class="absoluto plantilla cuartos">
                                 <button class="talla">S</button>
@@ -110,10 +110,8 @@ $camisetas = $camiseta->convertirDatos($datos);
                             </div>
                             <h3><?= $nombre ?></h3>
                             <div >
-                                <button id="carrito" class="plantilla  centrar mitad ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                                    </svg>
+                                <button data-id-producto="<?=$idProducto?>" class="plantilla carrito centrar mitad ">
+                                    comprar
                                 </button>
                                 <p><?= $precio ?>€</p>
                             </div>
@@ -138,7 +136,7 @@ $camisetas = $camiseta->convertirDatos($datos);
 
                     ?>
 
-                        <article>
+                        <article id="<?=$id?>">
                             <div class="hover"><a href="camiseta.php?id=<?= $id ?>"><img src="<?= $URL ?>" alt="<?= $nombre ?>" class="tamaño"></a></div>
                             <div class="absoluto plantilla cuartos">
                                 <button class="talla">S</button>
@@ -148,7 +146,7 @@ $camisetas = $camiseta->convertirDatos($datos);
                             </div>
                             <h3><?= $nombre ?></h3>
                             <div class="plantilla  centro mitad ">
-                                <button class=" boton compra">
+                                <button class="carrito boton compra">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                     </svg>

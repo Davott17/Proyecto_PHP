@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleCarrito.css">
+    <script src="funciones.js"></script>
+    <script src="Ver_Carrito.js"></script>
+</head>
+<body>
+    <header>
+        <div><img src="" alt="Logo"></div>
+        <div class="plantilla mitad derecha">
+            <button id="boton-login">Log in</button>
+            <Button id="boton-registro">Sing in</Button>
+        </div>
+    </header>
+    <main>
+        <button id="vercarrito"> Visualizar carrito</button>
+        <div id="producto-carrito"></div>
+    </main>
+    <footer>       
+        <div class="plantilla centrar sexto">
+            <div>
+            <a href="">Aqui va el footer</a>
+            <div>...</div>
+            <div>...</div>
+            <div>...</div>
+            </div>
+            <div>
+            <a href="">Aqui va el footer</a>
+            <div>...</div>
+            <div>...</div>
+            <div>...</div>
+            </div>
+            <div>
+            <a href="">Aqui va el footer</a>
+            <div>...</div>
+            <div>...</div>
+            <div>...</div>
+            </div>
+            <div>
+            <a href="">Aqui va el footer</a>
+            <div>...</div>
+            <div>...</div>
+            <div>...</div>
+            </div>
+            <div>
+            <a href="">Aqui va el footer</a>
+            <div>...</div>
+            <div>...</div>
+            <div>...</div>
+            </div>
+            <div>
+            <a href="">Aqui va el footer</a>
+            <div>...</div>
+            <div>...</div>
+            <div>...</div>
+            </div>
+            
+        </div>
+    </footer>
+    <div id="login" class="oculto">
+        <div class="modal">
+            <form action="login.php" method="post">
+                <label>Usuario</label>
+                <input class="input" type="text" name="usuario">
+                <label>Contraseña</label>
+                <input class="input" type="password" name="pass">
+                <button class="boton centrar">Enviar</button>
+            </form>
+        </div>
+        <div class="fondo"></div>
+    </div>
+    <div id="registro" class="oculto">
+        <div class="modal">
+            <form action="login.php" method="post">
+                <label>Nombre</label>
+                <input class="input" type="text">
+                <label>Apellidos</label>
+                <input class="input" type="text">
+                <label>Correo</label>
+                <input class="input" type="password">
+                <label>DNI</label>
+                <input class="input" type="text">
+                <label>Teléfono</label>
+                <input class="input" type="password">
+                <label>Dirección</label>
+                <input class="input" type="text">
+                <label>Contraseña</label>
+                <input class="input" type="password">
+                <button class="boton ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-send-plus-fill" viewBox="0 0 16 16">
+                        <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 1.59 2.498C8 14 8 13 8 12.5a4.5 4.5 0 0 1 5.026-4.47L15.964.686Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
+                        <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div class="fondo"></div>
+    </div>
+</body>
+</html>
